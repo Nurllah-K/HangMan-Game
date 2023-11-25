@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: "Passero One", sans-serif;
+  background-color: goldenrod;
+}
+body {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  padding: 20px 20px;
+  height: 450px;
+  width: 450px;
+  position: relative;
+}
+
+h1 {
+  color: rgb(60, 60, 60);
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+
+p {
+  color: rgb(60, 60, 60);
+  font-size: 25px;
+  text-align: center;
+}
+
+.grafik {
+  fill: transparent;
+  stroke: rgb(60, 60, 60);
+  stroke-width: 5px;
+}
+
+.item {
+  display: none;
+}
+
+#wrong-letters {
+  position: absolute;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 30px;
+  right: 30px;
+  color: rgb(60, 60, 60);
+}
+
+#wrong-letters span {
+  font-size: 25px;
+}
+#word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter {
+  border-bottom: 3px solid rgb(60, 60, 60);
+  font-size: 40px;
+  margin: 0 3px;
+  height: 40px;
+  width: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(60, 60, 60);
+}
+
+#popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background-color: rgb(60, 60, 60);
+  padding: 20px 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#success-message {
+  font-size: 35px;
+  background-color: transparent;
+  color: goldenrod;
+}
+
+#play-again {
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  text-transform: uppercase;
+  color: rgb(60, 60, 60);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#message {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 10px 80px;
+  position: absolute;
+  bottom: -80px;
+  transition: transform 0.5s ease-in-out;
+}
+
+#message p {
+  background-color: transparent;
+  color: rgb(60, 60, 60);
+  background-color: goldenrod;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+#message.show {
+  transform: translateY(-80px);
+}
